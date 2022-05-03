@@ -1,5 +1,5 @@
 # -Naive-Bayes-Algorithm
-Social_Network_Ads Dataset
+
 
 Introduction to Naive Bayes algorithm
 
@@ -7,25 +7,36 @@ In machine learning, Naïve Bayes classification is a straightforward and powerf
 
 Naïve Bayes models are also known as simple Bayes or independent Bayes. All these names refer to the application of Bayes’ theorem in the classifier’s decision rule. Naïve Bayes classifier applies the Bayes’ theorem in practice. This classifier brings the power of Bayes’ theorem to machine learning
 
-Naive Bayes algorithm intuition
+Why is it called Naïve Bayes?
 
-Naïve Bayes Classifier uses the Bayes’ theorem to predict membership probabilities for each class such as the probability that given record or data point belongs to a particular class. The class with the highest probability is considered as the most likely class. This is also known as the Maximum A Posteriori (MAP).
+The Naïve Bayes algorithm is comprised of two words Naïve and Bayes, Which can be described as:
 
-The MAP for a hypothesis with 2 events A and B is
+Naïve: It is called Naïve because it assumes that the occurrence of a certain feature is independent of the occurrence of other features. Such as if the fruit is identified on the bases of color, shape, and taste, then red, spherical, and sweet fruit is recognized as an apple. Hence each feature individually contributes to identify that it is an apple without depending on each other.
 
-MAP (A)
+Bayes: It is called Bayes because it depends on the principle of Bayes' Theorem
 
-= max (P (A | B))
+Bayes' Theorem:
+Bayes' theorem is also known as Bayes' Rule or Bayes' law, which is used to determine the probability of a hypothesis with prior knowledge. It depends on the conditional probability.
+The formula for Bayes' theorem is given as:
+Naïve Bayes Classifier Algorithm
+Where,
 
-= max (P (B | A) * P (A))/P (B)
+P(A|B) is Posterior probability: Probability of hypothesis A on the observed event B.
 
-= max (P (B | A) * P (A))
+P(B|A) is Likelihood probability: Probability of the evidence given that the probability of a hypothesis is true.
 
-Here, P (B) is evidence probability. It is used to normalize the result. It remains the same, So, removing it would not affect the result.
+P(A) is Prior Probability: Probability of hypothesis before observing the evidence.
 
-Naïve Bayes Classifier assumes that all the features are unrelated to each other. Presence or absence of a feature does not influence the presence or absence of any other feature.
+P(B) is Marginal Probability: Probability of Evidence.
 
-In real world datasets, we test a hypothesis given multiple evidence on features. So, the calculations become quite complicated. To simplify the work, the feature independence approach is used to uncouple multiple evidence and treat each as an independent one.
+Working of Naïve Bayes' Classifier:
+
+Convert the given dataset into frequency tables.
+
+Generate Likelihood table by finding the probabilities of given features.
+
+Now, use Bayes theorem to calculate the posterior probability.
+
 
 Types of Naive Bayes algorithm ¶
 
@@ -53,11 +64,25 @@ In the multivariate Bernoulli event model, features are independent boolean vari
 
 Applications of Naive Bayes algorithm ¶
 
-Naïve Bayes is one of the most straightforward and fast classification algorithm.
+It is used for Credit Scoring.
 
-It is very well suited for large volume of data. 
+It is used in medical data classification.
 
-It is successfully used in various applications such as :
+It can be used in real-time predictions because Naïve Bayes Classifier is an eager learner.
 
-Spam filtering Text classification Sentiment analysis Recommender systems It uses Bayes theorem of probability for prediction of unknown class
+It is used in Text classification such as Spam filtering and Sentiment analysis.
+
+Advantages of Naïve Bayes Classifier:
+
+Naïve Bayes is one of the fast and easy ML algorithms to predict a class of datasets.
+
+It can be used for Binary as well as Multi-class Classifications.
+
+It performs well in Multi-class predictions as compared to the other Algorithms.
+
+It is the most popular choice for text classification problems.
+
+Disadvantages of Naïve Bayes Classifier:
+
+Naive Bayes assumes that all features are independent or unrelated, so it cannot learn the relationship between features.
 
